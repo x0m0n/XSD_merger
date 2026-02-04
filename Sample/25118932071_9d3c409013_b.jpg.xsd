@@ -1,0 +1,114 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="rsp" minOccurs="0" maxOccurs="1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="photo" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="owner" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="gift" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="eligible_durations" minOccurs="0" maxOccurs="1" type="xs:string"/>
+                          <xs:element name="eligible_durations" minOccurs="0" maxOccurs="1" type="xs:string"/>
+                          <xs:element name="eligible_durations" minOccurs="0" maxOccurs="1" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="gift_eligible" type="xs:integer"/>
+                        <xs:attribute name="new_flow" type="xs:integer"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="iconfarm" type="xs:integer"/>
+                  <xs:attribute name="iconserver" type="xs:integer"/>
+                  <xs:attribute name="location" type="xs:string"/>
+                  <xs:attribute name="nsid" type="xs:string"/>
+                  <xs:attribute name="path_alias" type="xs:string"/>
+                  <xs:attribute name="realname" type="xs:string"/>
+                  <xs:attribute name="username" type="xs:string"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="title" minOccurs="0" maxOccurs="1" type="xs:string"/>
+              <xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string"/>
+              <xs:element name="visibility" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence/>
+                  <xs:attribute name="isfamily" type="xs:integer"/>
+                  <xs:attribute name="isfriend" type="xs:integer"/>
+                  <xs:attribute name="ispublic" type="xs:integer"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="dates" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence/>
+                  <xs:attribute name="lastupdate" type="xs:integer"/>
+                  <xs:attribute name="posted" type="xs:integer"/>
+                  <xs:attribute name="taken" type="xs:string"/>
+                  <xs:attribute name="takengranularity" type="xs:integer"/>
+                  <xs:attribute name="takenunknown" type="xs:integer"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="editability" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence/>
+                  <xs:attribute name="canaddmeta" type="xs:integer"/>
+                  <xs:attribute name="cancomment" type="xs:integer"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="publiceditability" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence/>
+                  <xs:attribute name="canaddmeta" type="xs:integer"/>
+                  <xs:attribute name="cancomment" type="xs:integer"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="usage" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence/>
+                  <xs:attribute name="canblog" type="xs:integer"/>
+                  <xs:attribute name="candownload" type="xs:integer"/>
+                  <xs:attribute name="canprint" type="xs:integer"/>
+                  <xs:attribute name="canshare" type="xs:integer"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="comments" minOccurs="0" maxOccurs="1" type="xs:integer"/>
+              <xs:element name="notes" minOccurs="0" maxOccurs="1" type="xs:string"/>
+              <xs:element name="people" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence/>
+                  <xs:attribute name="haspeople" type="xs:integer"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="tags" minOccurs="0" maxOccurs="1" type="xs:string"/>
+              <xs:element name="urls" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="url" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence/>
+                        <xs:attribute name="type" type="xs:string"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="dateuploaded" type="xs:integer"/>
+            <xs:attribute name="farm" type="xs:integer"/>
+            <xs:attribute name="id" type="xs:integer"/>
+            <xs:attribute name="isfavorite" type="xs:integer"/>
+            <xs:attribute name="license" type="xs:integer"/>
+            <xs:attribute name="media" type="xs:string"/>
+            <xs:attribute name="rotation" type="xs:integer"/>
+            <xs:attribute name="safety_level" type="xs:integer"/>
+            <xs:attribute name="secret" type="xs:string"/>
+            <xs:attribute name="server" type="xs:integer"/>
+            <xs:attribute name="views" type="xs:integer"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="stat" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

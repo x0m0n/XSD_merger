@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="rsp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="rsp" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="photo" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="owner" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="gift" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="eligible_durations" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="title" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="visibility" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="dates" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="editability" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="publiceditability" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="usage" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="comments" type="xs:integer" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="notes" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="people" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="tags" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="urls" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="url" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

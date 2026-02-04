@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="rsp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="photo" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="title" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+              <xs:element name="description" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+              <xs:element name="comments" type="xs:string" minOccurs="0" msdata:Ordinal="3" />
+              <xs:element name="notes" type="xs:string" minOccurs="0" msdata:Ordinal="4" />
+              <xs:element name="tags" type="xs:string" minOccurs="0" msdata:Ordinal="5" />
+              <xs:element name="owner" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="gift" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="eligible_durations" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="gift_eligible" type="xs:string" />
+                        <xs:attribute name="new_flow" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="iconfarm" type="xs:string" />
+                  <xs:attribute name="iconserver" type="xs:string" />
+                  <xs:attribute name="location" type="xs:string" />
+                  <xs:attribute name="nsid" type="xs:string" />
+                  <xs:attribute name="path_alias" type="xs:string" />
+                  <xs:attribute name="realname" type="xs:string" />
+                  <xs:attribute name="username" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="visibility" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="isfamily" type="xs:string" />
+                  <xs:attribute name="isfriend" type="xs:string" />
+                  <xs:attribute name="ispublic" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="dates" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="lastupdate" type="xs:string" />
+                  <xs:attribute name="posted" type="xs:string" />
+                  <xs:attribute name="taken" type="xs:string" />
+                  <xs:attribute name="takengranularity" type="xs:string" />
+                  <xs:attribute name="takenunknown" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="editability" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="canaddmeta" type="xs:string" />
+                  <xs:attribute name="cancomment" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="publiceditability" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="canaddmeta" type="xs:string" />
+                  <xs:attribute name="cancomment" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="usage" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="canblog" type="xs:string" />
+                  <xs:attribute name="candownload" type="xs:string" />
+                  <xs:attribute name="canprint" type="xs:string" />
+                  <xs:attribute name="canshare" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="people" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="haspeople" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="urls" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="url" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent msdata:ColumnName="url_Text" msdata:Ordinal="1">
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="type" type="xs:string" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="dateuploaded" type="xs:string" />
+            <xs:attribute name="farm" type="xs:string" />
+            <xs:attribute name="id" type="xs:string" />
+            <xs:attribute name="isfavorite" type="xs:string" />
+            <xs:attribute name="license" type="xs:string" />
+            <xs:attribute name="media" type="xs:string" />
+            <xs:attribute name="originalformat" type="xs:string" />
+            <xs:attribute name="originalsecret" type="xs:string" />
+            <xs:attribute name="rotation" type="xs:string" />
+            <xs:attribute name="safety_level" type="xs:string" />
+            <xs:attribute name="secret" type="xs:string" />
+            <xs:attribute name="server" type="xs:string" />
+            <xs:attribute name="views" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="stat" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="rsp" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
