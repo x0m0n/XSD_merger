@@ -611,7 +611,7 @@ def write_combined_xml(
 #     print(root_node)
 # Parse first file
 log_level=2
-os.chdir('.\\XSD_combine')
+os.chdir('.\\Sample')
 namespaces, tags, root_node = parse_xml_with_hierarchy("49571382423_8b6d54f3ef_o.jpg.xsd",log_level=log_level)
 
 # Merge second file
