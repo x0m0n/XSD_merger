@@ -1,6 +1,10 @@
+####IMPORTRANT####
+#USE THE XSD.EXE TOOL FROM MS NETFX SDK FOR PROPER XSD FILE GENERATION
+#DO NOT USE PYTHON'S XML2XSD MODULE!!
+
 import xml.etree.cElementTree as ET
 import os
-from dataclasses import dataclass, field
+#from dataclasses import dataclass, field
 
 class ElementNode:
     def __init__(self, tag, attrib, text, path,name=None):
