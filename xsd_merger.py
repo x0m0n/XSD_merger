@@ -4,7 +4,13 @@
 
 import xml.etree.cElementTree as ET
 import os
+import argparse
 #from dataclasses import dataclass, field
+
+parser = argparse.ArgumentParser(add_help=True,allow_abbrev=True)
+parser.add_argument('--suffix',help="Filter string before .xsd extension",default="")
+parser.add_argument('--outfile','-o',help="Name of the output combined file",default="combined.xsd")
+parser.add_argument('--log_level',help="Log level, default(0):no log. 1: informative. 2: debug/exhaustive",default=0,metavar="log-level")
 
 class ElementNode:
     def __init__(self, tag, attrib, text, path,name=None):
@@ -614,7 +620,8 @@ def write_combined_xml(
 #     print("\nRoot node:")
 #     print(root_node)
 # Parse first file
-log_level=2
+ArgList = parser.parse_args()
+log_level=ArgList.log_level
 os.chdir('.\\Sample')
 namespaces, tags, root_node = parse_xml_with_hierarchy("49571382423_8b6d54f3ef_o.jpg.xsd",log_level=log_level)
 
